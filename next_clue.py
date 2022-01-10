@@ -19,7 +19,6 @@ def check_hint(clue, hint):
         return hint in [":5", "5gg", "5G"]
     elif (clue == 8):
         return hint == subprocess.check_output(["wc", "-l", "/usr/share/dict/words"]).decode("utf-8").strip().split()[0]
-        return True
     elif (clue == 9):
         return hint == subprocess.check_output(["grep", "-A", "1", "tactful", "/usr/share/dict/words"]).decode("utf-8").strip().split('\n')[1]
     elif (clue == 10):
