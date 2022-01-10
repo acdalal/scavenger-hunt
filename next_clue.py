@@ -43,7 +43,7 @@ if __name__ == "__main__":
     else:
         R = random.Random()
         if (type(hint) == str):
-            md5 = hashlib.md5(hint)
+            md5 = hashlib.md5(hint.encode('utf-8'))
             hint_number = int(md5.hexdigest(),16)
         R.seed(secret_number + clue_number + hint_number)
         print (gc.zero_pad(R.randint(1, gc.CLUE_SPACE)))
