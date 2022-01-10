@@ -48,7 +48,7 @@ Now let's say we don't like the folder name `saved-clues`. We can just move
 Now do an `ls` to see the results of the move. Be careful with `mv`: you can
 easily overwrite an existing folder. 
 
-#### Find Clue 5 ####
+#### Find Clue 4 ####
 
 Read the man page for `mv` and find an
 option to prevent overwriting. That option is your next hint.
