@@ -26,7 +26,7 @@ You can also use `echo` to display what are called environment variables
 
 The `HOME` variable should make sense at this point. 
 
-#### Find Clue 6 ####
+#### Find Clue 5 ####
 
 The `PATH` variable tells the computer where programs are. Each path that could 
 contain a program is placed between colons. Your hint for the next clue is the 
