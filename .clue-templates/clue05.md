@@ -13,7 +13,7 @@ in the `/bin/` directory. `which` itself is a program so you could try:
 
     which which
 
-#### Finding Clue 7 ####
+#### Finding Clue 6 ####
 
 `python3` is a program we have been using to generate and test our clues. Your 
 next hint is the location of the `python3` program.
