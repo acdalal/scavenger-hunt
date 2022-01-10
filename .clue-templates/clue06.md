@@ -1,19 +1,36 @@
-### Clue 6: Which `which` is which? ###
+### Clue 6: Make Me a Sandwich ###
 
-#### `which` ####
+https://xkcd.com/149/
 
-In the previous clue we learned about `PATH`. This tells the computer where to
-find binary programs we can run. But, how do we find where a specific program
-is? The answer is `which`:
+#### `sudo` ####
 
-    which mv
+Linux has the concept of a `root` user, which is similar to the administrator
+user on Windows. This user is sometimes called the super user. If you want to
+do something as the super user, but stay logged in as yourself, there is a 
+command for that: `sudo`. It stands for "super-user do".
+
+#### Installing Software ####
+
+Sometimes you need a new program. To install software on some versions of Linux
+(Ubuntu and Debian), you use the command `apt-get`. On other versions (Fedora,
+CentOS) you use the command `yum`. On Mac, you should use [Homebrew](brew.sh) Let's install a text editing program
+called `vim`.
+
+    apt-get install vim
     
-This should print `/bin/mv`. This tells us that the `mv` command is installed
-in the `/bin/` directory. `which` itself is a program so you could try:
+You should get an error message asking if you are root. This means you don't
+have the ability to install software. Instead, try
 
-    which which
+    sudo apt-get install vim
+    
+Now we have the ability to edit files. Try
+
+    vim README.md
+    
+from the `scavenger-hunt` directory. Some of the commands for `vim` are a little
+strange. For now, just type `:q!` to quit.
+
 
 #### Finding Clue 7 ####
 
-`python` is a program we have been using to generate and test our clues. Your 
-next hint is the location of the `python` program.
+Suppose you have a file open in `vim` and want to go to line 5. Your next hint is the command that accomplishes that task. _(Note that there are several correct answers; you just need to indicate one of them.)_

@@ -1,6 +1,7 @@
-### Clue 11: The Final Frontier ###
+### Clue 11: Success! ###
 
-#### Finding the Final Clue ####
+#### You Found All the Clues ####
 
-Using everything you've learned so far, and the fact that the real clues are
-different from the fake clues, find the final clue!
+This is just the start of learning Unix. Explore, google things, break things -- and continue to ask questions.
+
+Congratulations and happy exploring!

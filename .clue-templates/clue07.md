@@ -1,42 +1,22 @@
-### Clue 7: Make Me a Sandwhich ###
+### Clue 7: Counting Words ###
 
-https://xkcd.com/149/
+#### `wc` ####
 
-#### `sudo` ####
+Word count (`wc`) is a useful program. You can use it to tell how many lines,
+words, and/or characters are in a file:
 
-Linux has the concept of a `root` user, which is similar to the administrator
-user on Windows. This user is sometimes called the super user. If you want to
-do something as the super user, but stay logged in as yourself, there is a 
-command for that: `sudo`. It stands for "super-user do".
-
-#### Installing Software ####
-
-Sometimes you need a new program. To install software on some versions of Linux
-(Ubuntu and Debian), you use the command `apt-get`. On other versions (Fedora,
-CentOS) you use the command `yum`. Let's install a text editing program
-called `vim`.
-
-    apt-get install vim
+    wc README.md
     
-You should get an error message asking if you are root. This means you don't
-have the ability to install software. Instead, try
-
-    sudo apt-get install vim
-    
-Now we have the ability to edit files. Try
-
-    vim README.md
-    
-from the `scavenger-hunt` directory. Some of the commands for `vim` are a little
-strange. For now, just type `:q!` to quit.
-
+This will print the number of lines, words, and characters, in that order. If
+you just want one of those, you can use `-l`, `-w`, or `-c`. 
 
 #### Finding Clue 8 ####
 
-The hint is the name of the first folder listed in `/sys/kernel/debug`.
+Check to see if you have the file `/usr/share/dict/words` installed. If not,
+run this:
 
-#### Help. I can't sudo ####
+    sudo apt-get install ispell
 
-Depending on the system you are using, you may not have permission to use `sudo`.
-In this case you can use the hint `denied`.
-
+Now there is a file that acts as a dictionary for spell-checking: 
+`/usr/share/dict/words`. Your next clue is the number of words in the 
+dictionary.

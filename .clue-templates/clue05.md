@@ -1,33 +1,19 @@
-### Clue 5: Is There an Echo in Here? ###
+### Clue 5: Which `which` is which? ###
 
-#### `echo` ####
+#### `which` ####
 
-Sometimes we want the computer to repeat back the results of some command. Try
+In the previous clue we learned about `PATH`. This tells the computer where to
+find binary programs we can run. But, how do we find where a specific program
+is? The answer is `which`:
 
-    echo hello
+    which mv
     
-The most basic thing `echo` will do is repeat back whatever you type. 
+This should print `/bin/mv`. This tells us that the `mv` command is installed
+in the `/bin/` directory. `which` itself is a program so you could try:
 
-#### Redirect ####
-You can use this to create a small file, or start a new file:
+    which which
 
-    echo My bologna has a first name > oscar.txt
-    
-If you look in oscar.txt you will see exactly what you typed. The `>` symbol
-used here is called a redirect. It redirects whatever would normally be printed
-to the screen to a file. You can try it with other commands:
+#### Finding Clue 7 ####
 
-    ls > my_directory.txt
-    
-You can also use `echo` to display what are called environment variables
-
-    echo $PATH
-    echo $HOME
-
-The `HOME` variable should make sense at this point. 
-
-#### Find Clue 6 ####
-
-The `PATH` variable tells the computer where programs are. Each path that could 
-contain a program is placed between colons. Your hint for the next clue is the 
-first path listed in your `PATH`.
+`python3` is a program we have been using to generate and test our clues. Your 
+next hint is the location of the `python3` program.

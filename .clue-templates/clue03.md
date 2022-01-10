@@ -1,49 +1,54 @@
-### Clue 3: Humans vs. Machines ###
+### Clue 3: Moving Day ###
 
-#### Binary vs. Text ####
+#### Making Space ####
 
-There are two basic types of files: binary and text. Text can be read by both
-humans and the computer, and is sometimes referred to as "human-readable". For
-example, the file you are reading right now is text.
+We've been exploring the directories that already exist on the computer. But
+what if we want to make our own folders and files? The first thing we need to
+do is create a new directory. First go home: `cd ~/scavenger-hunt`. Then do
 
-Binary is a number system that uses only 0 and 1 as digits. For example, 42 is
-represented as 101010 in binary. Each digit is called a "bit". Eight bits is
-called a "byte". There are 256 possible bytes (2^8). Bytes are a fundamental
-unit of measurement in computing (*e.g.* file sizes are in bytes). Computers
-use a shorthand for each byte called "hexadecimal" or more briefly "hex". In
-hex there are sixteen digits, the usual 0-9 and also A-F. A is equal to 10,
-B to 11, *etc*. Sometimes we write a `0x` in front of a hex number to indicate
-we are using hex: 42 is `0x2A`.
+    mkdir saved-clues
 
-If you ever look at a file and see a bunch of "garbage", you are probably
-looking at a binary file. The content isn't intended for you: it's for the
-computer. Binary files are sometimes referred to as "machine-readable".
+What we're going to do is save off all the clues we find in a separate folder
+that we created with `mkdir` (make directory). Since the README is clue 1 we
+don't need to worry about it. If you've been writing down all the clue
+locations, this next part should be easy.
 
-#### `/bin` ####
+#### Stop Copying Me ####
 
-One place you can always find binaries on a Linux system is in `/bin`. These
-binaries are programs: if you `ls` in `/bin` you may recoginze some of them
-(including `ls` itself). This is also a convenient way to get a list of
-commands.
+Let's copy all of the clues we've found so far to our saved-clues folder:
 
-If you want to see the garbage view of a binary, you can `cat` or
-`less` one of them. You can even `cat cat` or `less less`. On some Linux
-systems you can see the hex itself with `hexdump`.
+    cp clues/[0]/clue saved-clues/clue2
+    cp clues/[1]/clue saved-clues/clue3
 
-#### `/etc` ####
+This copies (`cp`) each clue to the new folder and gives them new names. If we
+had just done this
 
-This directory is named after the latin *et cetera* but is usally pronounced
-"et see". There are many text (and some binary) files here that are used to
-configure the system. Humans and computers can both read these files to find
-out how to configure the system.
+    cp clues/[0]/clue saved-clues/
+    cp clues/[1]/clue saved-clues/
 
-For example, look at the `/etc/fstab` file. This describes how the filesystem
-is mapped to the hard drive.
+The second file would overwrite the first, because they have the same name.
 
-#### Find Clue 4 ####
+#### Keep Your Options Open ####
 
-Your hint for clue 4 is the file `/etc/hostname`. This file contains a single
-word, which is the name of your computer. This name is your hint. Remember we
-can find the next hint by typing
+Unix commands often have options that change how they behave. For instance,
+compare `ls -l` to ordinary `ls`. Here the `-l` is an option. You can group 
+options together like this
 
-    python next_clue.py [secret number] [next clue number] [hint]
+    ls -lahS
+    
+The best way to find out about options is the manpage.
+
+#### Moving On ####
+
+Now let's say we don't like the folder name `saved-clues`. We can just move
+(`mv`) it:
+
+    mv saved-clues [pick a new name]
+
+Now do an `ls` to see the results of the move. Be careful with `mv`: you can
+easily overwrite an existing folder. 
+
+#### Find Clue 5 ####
+
+Read the man page for `mv` and find an
+option to prevent overwriting. That option is your next hint.

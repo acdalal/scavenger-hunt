@@ -1,4 +1,5 @@
 import os
+import subprocess
 import sys
 import random
 import hashlib
@@ -9,23 +10,19 @@ def check_hint(clue, hint):
         count = len(os.listdir("/usr"))
         return int(hint) == count
     elif (clue == 4):
-        hostname = open("/etc/hostname", "r").read().strip()
-        return hint == hostname
-    elif (clue == 5):
         return hint in ["i","n","-i","-n"]
-    elif (clue == 6):
+    elif (clue == 5):
         return hint == os.getenv("PATH").split(":")[0]
+    elif (clue == 6):      
+        return subprocess.check_output(["which", "python3"]).decode('utf-8').strip()
     elif (clue == 7):
-        return hint == os.popen2("which python")[1].read().strip()
+        return hint in [":5", "5gg", "5G"]
     elif (clue == 8):
-        return hint in ["acpi", "denied"]
+        return hint == subprocess.check_output(["wc", "-l", "/usr/share/dict/words"]).decode("utf-8").strip().split()[0]
+        return True
     elif (clue == 9):
-        return hint == os.popen2("wc -l /usr/share/dict/words")\
-            [1].read().strip().split()[0]
+        return hint == subprocess.check_output(["grep", "-A", "1", "tactful", "/usr/share/dict/words"]).decode("utf-8").strip().split('\n')[1]
     elif (clue == 10):
-        return hint == os.popen2("grep -A 1 tactful /usr/share/dict/words")\
-            [1].read().strip().split('\n')[1]
-    elif (clue == 11):
         return hint in ("-k 5 -n -r", "-k 5 -r -n", "-r -k 5 -n", "-r -n -k 5",\
             "-n -r -k 5", "-n -k 5 -r")
 
@@ -43,14 +40,14 @@ if __name__ == "__main__":
                                     gc.CLUE_SPACE, secret_number)
     #print clue_indexes
     if (check_hint(clue_number, hint)):
-        print gc.zero_pad(clue_indexes[clue_number - gc.START_CLUE])
+        print (gc.zero_pad(clue_indexes[clue_number - gc.START_CLUE]))
     else:
         R = random.Random()
         if (type(hint) == str):
             md5 = hashlib.md5(hint)
             hint_number = int(md5.hexdigest(),16)
         R.seed(secret_number + clue_number + hint_number)
-        print gc.zero_pad(R.randint(1, gc.CLUE_SPACE))
+        print (gc.zero_pad(R.randint(1, gc.CLUE_SPACE)))
 
 
 

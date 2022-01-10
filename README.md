@@ -1,14 +1,19 @@
 # scavenger-hunt #
 
-This is a scavenger hunt to learn Linux commands. Our goal is to find all
-the clues and learn how to use basic Linux commands in the process.
+This is a scavenger hunt to learn Unix commands. Our goal is to find all
+the clues and learn how to use basic Unix commands in the process.
 
 ## Setup ##
 
-If you are using a new Linux install or Live CD, you may need to install
-Git first (`sudo apt-get install git` on Ubuntu). Open a terminal and type:
+Note that this tutorial assumes that you have git installed on whatever computer you are using. If this is not the case, do the following:
 
-    git clone https://github.com/pushingice/scavenger-hunt.git
+**On Windows (WSL) or Linux:** `sudo apt-get install git` 
+
+**On MacOS:** `brew install git`
+
+Open a terminal and type:
+
+    git clone https://github.com/acdalal/scavenger-hunt.git
     cd scavenger-hunt
 
 First, choose a secret number with at least 4 digits to share with your team,
@@ -16,21 +21,21 @@ or keep to yourself if you are working alone. Don't forget it! The secret
 number makes your clues unique, so other teams can't look over your shoulder.
 Then type:
 
-    python generate_clues.py [secret number]
+    python3 generate_clues.py [secret number]
 
 Any time we enclose something in square brackets, you need to replace it
 with an actual value (called an argument). For example, to get started I
 might type:
 
-    python generate_clues.py 42
+    python3 generate_clues.py 4200
 
 This will create a subdirectory called `clues`. Be sure to keep this file
 (called the README) open in a separate viewer.
 
 ## Reference ##
 
-If you want to learn more about Linux when you are finished, or need a reference
-during the hunt, go here: http://www.tldp.org/LDP/intro-linux/html/index.html.
+If you want to learn more about Unix when you are finished, or need a reference
+during the hunt, go here: **INSERT CHEAT SHEET**
 
 ### Clue 1: The Hunt Begins ###
 
