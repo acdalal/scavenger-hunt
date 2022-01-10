@@ -35,7 +35,7 @@ This will create a subdirectory called `clues`. Be sure to keep this file
 ## Reference ##
 
 If you want to learn more about Unix when you are finished, or need a reference
-during the hunt, go here: **INSERT CHEAT SHEET**
+during the hunt, I recommend [this cheat sheet](https://commons.wikimedia.org/wiki/File:Unix_command_cheatsheet.pdf).
 
 ### Clue 1: The Hunt Begins ###
 
