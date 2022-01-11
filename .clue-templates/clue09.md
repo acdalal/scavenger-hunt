@@ -40,7 +40,7 @@ Your hint is the options you had to use. You'll need to use double quotes for
 your hint. For example, if your command was `sort -a -b -c`, your hint would
 be
 
-    python next_clue.py [secret] 11 "-a -b -c"
+    python3 next_clue.py [secret] 11 "-a -b -c"
     
 
 
