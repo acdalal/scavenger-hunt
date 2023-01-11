@@ -17,6 +17,8 @@ CentOS) you use the command `yum`. On Mac, you should use [Homebrew](brew.sh) Le
 called `vim`.
 
     apt-get install vim
+
+(Note: replace `apt-get` with `brew` on Mac!)
     
 You should get an error message asking if you are root. This means you don't
 have the ability to install software. Instead, try

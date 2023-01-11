@@ -17,14 +17,14 @@ locations, this next part should be easy.
 
 Let's copy all of the clues we've found so far to our saved-clues folder:
 
-    cp clues/[0]/clue saved-clues/clue2
-    cp clues/[1]/clue saved-clues/clue3
+    cp clues/[1]/clue saved-clues/clue2
+    cp clues/[2]/clue saved-clues/clue3
 
 This copies (`cp`) each clue to the new folder and gives them new names. If we
 had just done this
 
-    cp clues/[0]/clue saved-clues/
     cp clues/[1]/clue saved-clues/
+    cp clues/[2]/clue saved-clues/
 
 The second file would overwrite the first, because they have the same name.
 
@@ -52,3 +52,5 @@ easily overwrite an existing folder.
 
 Read the man page for `mv` and find an
 option to prevent overwriting. That option is your next hint.
+
+(Note that string or character command line arguments should be enclosed in single or double quotes. So, for instance, if the correct option to prevent overwriting is -x, you'd execute the command `python3 next_clue.py 42 4 "-x"` to find the next clue.)

@@ -17,6 +17,8 @@ run this:
 
     sudo apt-get install ispell
 
+(or `sudo brew install ispell` on Mac)
+
 Now there is a file that acts as a dictionary for spell-checking: 
 `/usr/share/dict/words`. Your next clue is the number of words in the 
 dictionary.
